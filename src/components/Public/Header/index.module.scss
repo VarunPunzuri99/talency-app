@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    .links {
+        gap: 2rem;
+        display: flex;
+
+        a {
+            height: 100%;
+            color: #fff;
+
+            &:hover {
+                color: var(--color-1);
+            }
+        }
+    }
+
+    .auth_and_lang {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-around;
+
+        // button {
+
+        // }
+    }
+}

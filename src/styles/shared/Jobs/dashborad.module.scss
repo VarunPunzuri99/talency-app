@@ -1,0 +1,194 @@
+$gap: 20px;
+
+.job_section {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat(3, 1fr);
+
+    & > div {
+        background: var(--surface-card);
+        border: 1px solid var(--surface-border);
+        padding: 2rem;
+        box-shadow: var(--shadow-1);
+        border-radius: 12px;
+
+        min-height: 150px;
+        border-radius: 20px;
+        padding: $gap;
+
+        & > a {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--text-color-1);
+            font-size: 3rem;
+            font-weight: 500;
+
+            span {
+                color: var(--text-color-1);
+                font-size: 1.3rem;
+                font-weight: 500;
+            }
+
+            i {
+                font-size: 2rem;
+            }
+        }
+
+        &.job_statics {
+            .statics_header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .left_section {
+                    h2 {
+                        color: var(--text-color-2);
+                        font-size: 20px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        margin-top: 5px;
+                        color: #878787;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+
+                .right_section {
+                    border-radius: 5px;
+                    padding: 10px;
+                    background: #d9d9d9;
+
+                    button {
+                        border-radius: 5px;
+                        padding: 10px 20px;
+
+                        &.active {
+                            background: var(--white);
+                        }
+                    }
+                }
+            }
+
+            .tabs {
+                margin-top: $gap;
+
+                :global(.p-tabview-panels) {
+                    padding: $gap 0;
+                    background: none;
+                }
+
+                :global(.p-tabview-nav),
+                :global(.p-tabview-nav-link) {
+                    background: none !important;
+                }
+
+                :global(.p-tabview-nav-link) {
+                    padding: 10px 15px;
+                }
+
+                .tab_content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: $gap;
+
+                    .chart {
+                        flex-grow: 1;
+                    }
+
+                    .card {
+                        padding: $gap;
+                        border: var(--border);
+                        border-radius: 8px;
+                        min-width: 200px;
+                        margin-bottom: $gap;
+                        background: var(--white);
+
+                        .title {
+                            color: var(--text-color-1);
+
+                            font-size: 16px;
+
+                            font-weight: 500;
+                        }
+
+                        .count {
+                            margin-top: 10px;
+                            color: var(--text-color-1);
+
+                            font-size: 30px;
+
+                            font-weight: 500;
+                        }
+
+                        .status {
+                            margin-top: 10px;
+                            color: var(--text-color-2);
+
+                            font-size: 12px;
+
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.open_job,
+        &.application_summary {
+            .card_title {
+                color: var(--text-color-2);
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .desc {
+                margin-top: 10px;
+                color: #a8a8a8;
+                font-size: 20px;
+                font-weight: 500;
+
+                span {
+                    color: var(--text-color-2);
+                    font-size: 60px;
+                    font-weight: 500;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &:nth-child(-n + 3) {
+            display: grid;
+            place-items: center;
+        }
+
+        &:nth-child(4) {
+            grid-row: 2 / span 2;
+            grid-column: 1 / span 2;
+        }
+
+        &:last-child {
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .job_section {
+        grid-template-columns: auto;
+
+        div {
+            &:nth-child(4) {
+                grid-row: unset;
+                grid-column: unset;
+            }
+
+            &:last-child {
+                grid-column: unset;
+            }
+        }
+    }
+}

@@ -1,0 +1,255 @@
+.layout_wrapper {
+    height: 100vh;
+    overflow: auto;
+
+    .layout_topbar {
+        height: 64px;
+        display: grid;
+        align-items: center;
+        padding-right: 1rem;
+        background: #152838;
+        grid-template-columns: 250px auto max-content;
+
+        .logo {
+            display: flex;
+            align-self: center;
+            justify-content: center;
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        .links {
+            display: flex;
+            gap: 40px;
+            padding-left: 20px;
+
+            a {
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 500;
+                opacity: 0.6;
+                cursor: pointer;
+
+                &.active {
+                    opacity: 1;
+                    pointer-events: all;
+                    color: #e56a48;
+                }
+
+                &:hover {
+                    opacity: 1;
+                    color: #e56a48;
+                }
+            }
+        }
+
+        .icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            // color: #fff;
+
+            img {
+                cursor: pointer;
+            }
+
+            i {
+                display: none;
+                color: hsl(0, 0%, 100%);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .layout_side_bar {
+        display: flex;
+
+        aside {
+            border: 0;
+        }
+
+        .sidebar {
+            position: relative;
+            z-index: 10;
+
+            .mobile_items {
+                display: none;
+            }
+            .desktop_items {
+                img {
+                    /* Apply a filter to darken and then invert only dark colors */
+                    filter: brightness(0) invert(1); /* Converts black to white but leaves white unaffected */
+                }
+            
+                .pi {
+                    color: #fff; /* Ensures the icon font color is white */
+                }
+            
+                /* Optional: Hover effect for images */
+                img:hover {
+                    filter: brightness(0) invert(1) contrast(1.2); /* Enhances contrast on hover */
+                }
+            }
+
+            .desktop_items {
+                img {
+                  
+                    filter: brightness(0) invert(1); 
+                }
+            
+                .pi {
+                    color: #fff; 
+                }
+            
+                
+                img:hover {
+                    filter: brightness(0) invert(1) contrast(1.2); 
+                }
+            }
+
+            .desktop_items {
+                img {
+                    /* Apply a filter to darken and then invert only dark colors */
+                    filter: brightness(0) invert(1); /* Converts black to white but leaves white unaffected */
+                }
+            
+                .pi {
+                    color: #fff; /* Ensures the icon font color is white */
+                }
+            
+                /* Optional: Hover effect for images */
+                img:hover {
+                    filter: brightness(0) invert(1) contrast(1.2); /* Enhances contrast on hover */
+                }
+            }
+
+
+            .logo {
+                top: 0;
+                z-index: 2;
+                height: 64px;
+                display: none;
+                position: sticky;
+                place-items: center;
+                background: var(--color-2);
+
+                img {
+                    object-fit: contain;
+                }                
+            }
+
+            nav>ul {
+                margin-top: 10px;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        i {
+                            color: rgb(255, 255, 255);
+                            font-size: 1.3rem;
+                        }
+
+                        :global(.ps-menu-label) {
+                            color: #ffffff;
+                        }
+                
+                        &:hover,
+                        &:global(.ps-active) {
+                            background-color: rgba(21, 40, 56, 0.1);
+                        }
+                    }
+                }
+            }
+
+            // sub icon 
+            :global(.ps-submenu-expand-icon) {
+                span {
+                    color: #fff;
+                    height: 8px;
+                    width: 8px;
+                }
+            }
+
+            // expand content
+            :global(.ps-submenu-content) {
+                margin: 10px;
+                font-weight: 600;
+                font-size: 1.1rem;
+                background: transparent !important;
+
+                ul {
+                    li {
+                        margin: 0;
+
+                        a {
+                            border-radius: 4px;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .addedGap {
+            padding: 1rem;
+        }
+        .content {
+            overflow: auto;
+            height: calc(94vh);
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .layout_wrapper {
+        overflow: auto;
+
+        .layout_topbar {
+            display: flex;
+            padding: 0 1rem;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                img {
+                    margin-top: 5px;
+                }
+            }
+
+            .links {
+                display: none;
+            }
+
+            .icons {
+                align-items: center;
+
+                i {
+                    font-size: 1.4rem;
+                    display: block;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .layout_side_bar {
+            .sidebar {
+                left: -250px;
+                position: fixed;
+                
+                .logo {
+                    display: grid;
+                    color: #ffffff;
+
+                }
+
+                
+                .mobile_items {
+                    display: block;
+                }
+            }
+        }
+    }
+}

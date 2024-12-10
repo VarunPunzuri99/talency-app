@@ -1,0 +1,17 @@
+.left_section,
+.right_section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.right_section {
+    display: flex;
+    min-width: 50%;
+    gap: 20px;
+    align-items: center;
+
+    :global(.p-input-icon-left) {
+        width: 80%;
+    }
+}

@@ -1,0 +1,497 @@
+$font-1: 12px;
+$font-2: 14px;
+$font-3: 16px;
+$color-1: #152838;
+$color-2: #818181;
+$bg: #f0f0f0;
+$gap: 15px;
+$border: 1px solid #dbdbdb;
+$mailBorder: 1px solid #ececec;
+
+.wrapper {
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+
+    .left_section,
+    .right_section {
+        border-radius: 10px;
+        padding: 10px 15px;
+        border: var(--border);
+    }
+
+    .left_section {
+        .top_bar {
+            display: flex;
+            padding: 10px 0;
+            align-items: center;
+            margin-bottom: 10px;
+            justify-content: space-between;
+            border-bottom: var(--border);
+
+            .top_bar_left_section {
+                display: flex;
+                gap: 1rem;
+
+                button {
+                    padding: 8px 12px;
+                }
+            }
+        }
+
+        .task_details {
+            .task_details_header {
+                display: flex;
+                padding: 10px 0;
+                align-items: center;
+                margin-bottom: 10px;
+                justify-content: space-between;
+
+                .task_details_title {
+                    color: var(--text-color-1);
+
+                    font-size: 20px;
+
+                    font-weight: 500;
+                }
+            }
+
+            .task_assigned {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                justify-content: space-between;
+
+                .task_assigned_left_section,
+                .task_assigned_right_section {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    .task_assigned_lable {
+                        color: #acacac;
+
+                        font-size: 14px;
+
+                        font-weight: 500;
+                    }
+                }
+
+                .task_assigned_left_section {
+                    .task_assigned_avatar {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+
+                        .task_assigned_avatar_box {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 30px;
+                            /* Adjust size as needed */
+                            height: 30px;
+                            /* Adjust size as needed */
+                            border-radius: 50%;
+                            background: #ff7e7e;
+                            font-size: 18px;
+                            /* Font size for the letter */
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            /* Optional: make the letter uppercase */
+                            text-align: center;
+                            /* Center text horizontally */
+                            line-height: 40px;
+                            /* Ensure text is vertically centered if height is fixed */
+                        }
+
+                        .name {
+                            color: var(--text-color-2);
+
+                            font-size: 14px;
+
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .task_assigned_right_section {
+                    .task_assigned_date {
+                        i {
+                            margin-right: 10px;
+                        }
+
+                        color: var(--text-color-2);
+
+                        font-size: 14px;
+
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .task_also_assigned {
+                display: flex;
+                align-items: center;
+                padding: 0 0 10px 0;
+                border-bottom: var(--border);
+
+                label {
+                    color: #acacac;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-right: 10px;
+                }
+
+                .account_section {
+                    display: flex;
+                    flex-grow: 1;
+                }
+
+                .account_and_assigned {
+                    display: flex;
+                    flex-wrap: wrap;
+                    /* Allows wrapping if names overflow */
+                    gap: 10px;
+                    /* Adds space between the assignees */
+                }
+
+                .round_box {
+                    background-color: #f5f5f5;
+                    padding: 5px 10px;
+                    border-radius: 12px;
+                }
+
+                img {
+                    object-fit: cover;
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+
+        .task_content {
+            margin: 20px 0;
+            color: var(--text-color-1);
+            // text-align: justify;
+
+            // font-size: 14px;
+        }
+
+        .sub_tasks_title,
+        .title {
+            color: var(--text-color-2);
+
+            font-size: 16px;
+
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .sub_tasks {
+            ul {
+                margin: 20px 0;
+
+                li {
+                    padding: 10px;
+                    margin: 0;
+                    list-style-type: none;
+                    position: relative;
+                    margin-left: 30px;
+                    padding-left: 50px;
+                    border-left: 1px dashed rgb(100, 100, 100);
+
+                    &::before {
+                        top: 50%;
+                        left: -0px;
+                        content: '';
+                        position: absolute;
+                        width: 40px;
+                        border-bottom: 1px dashed rgb(100, 100, 100);
+                    }
+                }
+            }
+        }
+
+        .task_attachment {
+            margin-bottom: 10px;
+
+            .task_attachment_details {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .task_attachment_box {
+                    display: flex;
+                    gap: 20px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    align-items: center;
+                    background: #d9d9d9;
+
+                    .task_attachment_icons {
+                        padding: 10px;
+                        background: #fff;
+                        border-radius: 10px;
+                    }
+
+                    .task_attachment_text_details {
+                        .task_attachment_text_title {
+                            color: var(--text-color-1);
+
+                            font-size: 16px;
+
+                            font-weight: 500;
+                        }
+
+                        .task_attachment_size {
+                            color: #8c8c8c;
+
+                            font-size: 14px;
+
+                            font-weight: 500;
+
+                            margin-top: 5px;
+                        }
+                    }
+
+                    // .task_attachmentdownload {
+                    // }
+                }
+            }
+        }
+
+        .task_resolve {
+            .data {
+                // color: #acacac;
+
+                margin-bottom: 20px;
+
+                font-size: 20px;
+
+                font-weight: 500;
+            }
+        }
+    }
+
+    .right_section {
+        .title {
+            color: #989898;
+            // font-size: 16px;
+            font-weight: 500;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            border-bottom: var(--border);
+        }
+
+        .comment_box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 5px 0;
+            margin-bottom: 10px;
+
+            .avatar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                /* Adjust size as needed */
+                height: 30px;
+                /* Adjust size as needed */
+                border-radius: 50%;
+                background: #ff7e7e;
+                font-size: 18px;
+                /* Font size for the letter */
+                font-weight: bold;
+                text-transform: uppercase;
+                /* Optional: make the letter uppercase */
+                text-align: center;
+                /* Center text horizontally */
+                line-height: 40px;
+                /* Ensure text is vertically centered if height is fixed */
+            }
+
+            .details {
+                .nameAndDate {
+                    display: flex;
+                    justify-content: space-between;
+                    color: var(--text-color-1);
+                    margin-bottom: 5px;
+
+                    .time {
+                        color: #7c7c7c;
+                        margin-left: 150px;
+                        /* Adjust this value as needed for fixed spacing */
+                    }
+                }
+
+                .desc {
+                    color: var(--text-color-1);
+                    /* Add other styles as needed */
+                }
+            }
+        }
+
+        .footer {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            margin-top: 10px;
+            justify-content: space-between;
+            background: #d9d9d9;
+
+            .footer_left_part {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    cursor: pointer;
+                }
+            }
+
+            button {
+                border: 0;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 8px 12px;
+                background: #7adeba;
+                color: var(--text-color-2);
+            }
+        }
+    }
+
+    .modal_footer {
+        margin: 10px 0;
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
+
+        button {
+            padding: 10px 50px;
+        }
+    }
+}
+
+.resolve_task_dialog {
+
+    :global(.p-dialog-content),
+    :global(.p-dialog-header) {
+        padding: 1rem !important;
+    }
+
+    :global(.p-dialog-header) {
+        border-radius: 10px 10px 0px 0px;
+        background: var(--text-color-1);
+        color: var(--white);
+        padding: 10px;
+
+        svg {
+            fill: var(--white);
+            color: var(--white);
+        }
+    }
+
+    .body {
+        gap: 15px;
+        display: flex;
+        padding: 15px;
+        flex-direction: column;
+
+        label {
+            display: block;
+        }
+
+        span {
+            cursor: pointer;
+            display: inline-flex;
+            gap: 5px;
+        }
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border-top: var(--border);
+        justify-content: space-between;
+
+        .left_section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
+
+.attachment {
+    // padding: 0 var(--gap);
+
+    .title {
+        color: var(--text-color-1);
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .attachment_wrapper {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .attachment_box {
+        display: flex;
+        gap: 15px;
+        /* Reduced gap for better fit */
+        padding: 10px;
+        border-radius: 10px;
+        align-items: center;
+        background: #d9d9d9;
+        max-width: 100%;
+        /* Ensures it doesn’t overflow its container */
+        box-sizing: border-box;
+        /* Include padding and border in the element's total width and height */
+    }
+
+    .attachment_icons {
+        padding: 10px;
+        background: #fff;
+        border-radius: 10px;
+    }
+
+    .attachment_text_details {
+        display: flex;
+        flex-direction: column;
+        /* Stack text details vertically */
+        max-width: 200px;
+        /* Adjust based on your layout */
+        overflow: hidden;
+        /* Hide overflow text */
+
+        .attachment_text_title {
+            color: var(--text-color-1);
+            font-size: 16px;
+            font-weight: 500;
+            white-space: nowrap;
+            /* Prevent text wrapping */
+            overflow: hidden;
+            /* Hide overflow text */
+            text-overflow: ellipsis;
+            /* Add ellipsis for overflow text */
+        }
+
+        .attachment_size {
+            color: #8c8c8c;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}

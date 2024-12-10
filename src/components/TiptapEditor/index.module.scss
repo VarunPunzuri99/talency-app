@@ -1,0 +1,62 @@
+/* Basic editor styles */
+.mention {
+  background-color: rgb(109, 182, 134);
+  border-radius: 0.4rem;
+  box-decoration-break: clone;
+  color: var(--purple);
+  padding: 0.1rem 0.3rem;
+}
+
+/* Editor container styles */
+.editor {
+  border: 1px solid #ccc; 
+  min-height: 100px; 
+  padding: 10px; 
+  border-radius: 5px; 
+  background-color: #f9f9f9; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height:200px;
+  overflow-y:auto;
+}
+
+.smallImage {
+    max-width: 50px;  /* Adjust the size */
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+// .editor table {
+//   width: 100%;
+//   border-collapse: collapse;
+//   margin-top: 16px;
+//   overflow: hidden;
+//   table-layout: fixed;
+
+//   th,
+//   td {
+//       border: 1px solid #ddd;
+//       padding: 8px;
+//       text-align: left;
+//       vertical-align: top;
+//       background-color: #fff;
+//       font-size: 0.95em;
+//       position: relative; /* Ensure cells are positioned relative to the table */
+//   }
+
+//   th {
+//       background-color: #e9e9f2;
+//       font-weight: bold;
+//   }
+
+//   /* Column resize handle */
+//   .column-resize-handle {
+//       width: 4px;
+//       background-color: #6db686;
+//       position: absolute;
+//       right: -2px;
+//       top: 0;
+//       bottom: 0;
+//       z-index: 2;
+//       cursor: ew-resize; /* Use ew-resize for column resizing */
+//   }
+// }

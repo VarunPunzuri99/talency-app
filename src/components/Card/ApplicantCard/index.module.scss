@@ -1,0 +1,86 @@
+.jobapplications {
+    padding: 20px 12px !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    .jobCard {
+        width: 420px;
+        border: 1px solid #E3E3E3;
+        border-radius: 20px;
+        cursor: grab;  
+
+        &:active {
+            cursor: grabbing;  
+        }
+
+        .jobCardMain {
+            display: flex;
+            padding: 15px;
+            gap: 10px;
+
+            .jobDetails {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 12px;
+
+                .title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h5 {
+                        font-weight: bold;
+                    }
+                }
+
+                .info {
+                    display: grid;
+                    grid-template-columns: repeat(8, 1fr);
+                    gap: 15px;
+                    row-gap: 12px;
+
+                    .iconInfo {
+                        justify-self: flex-start;
+                        white-space: nowrap;
+                        grid-column: span 2;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            margin-right: 5px;
+                        }
+
+                        &.state {
+                            grid-column: span 4;
+                            justify-self: flex-end;
+                        }
+
+                        &.fullWidth {
+                            grid-column: 1 / -1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            // margin-top: 10px;
+            padding: 10px 35px;
+            border-top: 1px solid #E3E3E3;
+            display: flex;
+            gap: 30px;
+
+            i {
+                color: black;
+            }
+
+            .fullWidth {
+                width: 100%;
+                text-align: end;
+            }
+        }
+    }
+}

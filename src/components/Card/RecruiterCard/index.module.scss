@@ -1,0 +1,90 @@
+.wrapper {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    .card {
+        gap: 10px;
+        display: grid;
+        padding: 1rem;
+        padding-bottom: 0;
+        place-items: center;
+        position: relative;
+        background: #ffffff;
+        border: var(--border);
+        border-radius: 12px;
+
+        .check_box {
+            position: absolute; 
+            top: 20px; 
+            left: 10px; 
+        }
+
+        .options_button {
+            top: 20px;
+            z-index: 1;
+            right: 10px;
+            cursor: pointer;
+            position: absolute;
+            color: var(--text-color-1);
+            font-weight: 900;
+        }
+
+        .box {
+            border-radius: 50%;
+            width: 6.25rem;
+            height: 6.25rem;
+            background: #bf6060;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-size: 1.875rem;
+            font-weight: 500;
+        }
+
+        .name {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            color: var(--text-color-1);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .address {
+            color: var(--text-color-1);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .button_wrapper {
+            width: 100%;
+
+            .details {
+                color: var(--text-color-1);
+                font-size: 0.875rem;
+                font-weight: 900;
+
+                padding: 0.56rem;
+                text-align: center;
+                border-top: 1px solid #e7e7e7;
+                border-bottom: 1px solid #e7e7e7;
+            }
+
+            .action {
+                position: relative;
+                z-index: 10;
+                display: grid;
+                place-items: center;
+                padding: 0.56rem;
+                grid-template-columns: repeat(3, 1fr);
+
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

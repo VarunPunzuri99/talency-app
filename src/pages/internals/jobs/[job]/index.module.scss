@@ -1,0 +1,49 @@
+.job {
+    background-color: #F6F6F6;
+border-radius: 10px;
+    header {
+        border-bottom: 1px solid #DEDEDE;
+        i {
+            padding: 4px;
+            background-color: var(--text-color-1);
+            border-radius: 50%;
+            color: #F6F6F6;
+        }
+
+        p {
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        h4 {
+            font-size: 16px;
+        }
+    }
+
+    .main {
+        padding: 30px;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        h5 {
+            font-size: 16px;
+        }
+
+        li {
+            font-size: 20px;
+
+        }
+
+        .companyName {
+            text-align: center;
+            color: var(--color-1);
+        }
+    }
+}

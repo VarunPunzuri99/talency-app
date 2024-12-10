@@ -1,0 +1,45 @@
+$white: #ffffff;
+/* White color */
+$gray-2: #e0e0e0;
+/* Lighter gray */
+$gray-3: #c0c0c0;
+/* Darker gray */
+$shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Box shadow */
+
+/* Dropdown menu */
+.dropdown {
+    background: $white;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    overflow: auto;
+    position: absolute; /* Change to absolute positioning */
+    z-index: 9999; /* Ensure it appears above other elements */
+    
+    /* Ensure the dropdown stays above the dialog box */
+    button {
+        align-items: center;
+        background-color: transparent;
+        display: flex;
+        gap: 0.25rem;
+        text-align: left;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        color: #333;
+
+        &:hover,
+        &:hover.is-selected {
+            background-color: $gray-3;
+        }
+
+        &.is-selected {
+            background-color: $gray-2;
+        }
+    }
+
+    button {
+        border: none;
+    }
+}

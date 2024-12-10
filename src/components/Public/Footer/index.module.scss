@@ -1,0 +1,20 @@
+.footer {
+    color: #fff;
+    padding: 2rem 0;
+    background-color: #000;
+
+    :global(.container) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            position: relative;
+        }
+
+        .termsCondition {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}

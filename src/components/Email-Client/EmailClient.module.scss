@@ -1,0 +1,434 @@
+// EmailClient.module.scss
+
+.emailClient {
+  display: flex;
+  height: 100vh; // Adjust height to match available viewport
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.folder {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.folder:hover {
+  background-color: #ddd;
+}
+
+.emailList {
+  width: 30%;
+  max-width: 30%;  // Prevent it from exceeding 30%
+  flex-shrink: 0;  // Do not allow shrinking
+  border-right: 1px solid #ddd;
+  padding: 10px;
+  overflow-y: auto;  // Scroll only for overflowed content
+
+  // Hide scrollbar but keep scrolling functionality
+  &::-webkit-scrollbar {
+    width: 0; // Hide the scrollbar
+  }
+
+  .emailItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer; // Enable pointer cursor
+    transition: transform 0.3s ease-in-out, background-color 0.2s ease-in-out; // Smooth transition for hover and transform
+
+    .emailContent {
+      white-space: nowrap;  // Prevent text from wrapping
+      overflow: hidden;     // Hide overflowing text
+      text-overflow: ellipsis; // Add ellipsis at the end of long text
+      // border-bottom: 1px solid #000; // Add border between each item
+    }
+
+    // Hover effect to move item slightly upwards
+    &:hover {
+      background-color: #f5f5f5; // Slightly change background color on hover
+      transform: translateY(-5px); // Move the item slightly upwards (5px)
+      box-shadow: 0 4px 8px rgba(199, 196, 196, 0.1);
+    }
+    &.unread {
+      background-color: #f0f0f0;
+      font-weight: bold;
+      color: #000;
+    }
+
+    &.read {
+      background-color: #fff;
+      font-weight: normal;
+      color: #888;
+    }
+  }
+}
+
+.emailDetail {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;  // Prevent scroll within the email detail section itself
+}
+
+.emailHeader {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.emailMeta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.emailBodyContainer {
+  flex-grow: 1;  // Make this container grow to take up the available space
+  overflow-y: auto;  // Enable scroll only if content overflows
+  padding-right: 10px;  // Right padding to prevent content from hitting the edge
+}
+
+.emailBody {
+  height: 100%;  // Ensure full height usage within the container
+  width: 100%;
+  border: none;
+}
+
+/* EmailItem Styles */
+.emailItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #000;  /* Add border between each item */
+  transition: background-color 0.2s, color 0.2s;
+
+  &:last-child {
+    border-bottom: none; /* Remove border for the last item */
+  }
+}
+
+.unread {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  color: #000;
+}
+
+.read {
+  background-color: #fff;
+  font-weight: normal;
+  color: #888;
+}
+
+
+.emailActions {
+  display: flex;
+  align-items: center;
+  .iconBar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  
+    .icon {
+      cursor: pointer;
+      margin-left: 10px;
+      font-size: 20px;
+      color: #666;
+      
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  
+}
+
+.emailContent {
+  flex-grow: 1;
+  overflow-y: auto; /* Allows vertical scrolling */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.emailDetail {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.emailHeader {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.emailMeta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.emailContent p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.emailIframeContainer {
+  flex-grow: 1;
+  position: relative;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden; /* Hide overflow to round the corners */
+  height: 400px; /* Fixed height for the iframe container */
+}
+
+.emailIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #fff;
+}
+
+.email-modal {
+  height:fit-content
+  .p-dialog-header {
+    background-color: #1e3a8a; // Custom header background color
+    color: #fff; // Header text color
+    padding: 1rem;
+  }
+
+  .p-dialog-content {
+    padding: 1.5rem;
+  }
+
+  .p-dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-color: #f1f1f1;
+  }
+
+  .p-field {
+    margin-bottom: 1.5rem;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: #333;
+
+      &:focus {
+        border-color: #1e3a8a;
+        box-shadow: 0 0 5px rgba(30, 58, 138, 0.5);
+      }
+    }
+
+    .p-editor-container {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .p-editor-toolbar {
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .p-editor-content {
+        min-height: 250px;
+        max-height: 400px;
+        overflow-y: auto;
+        padding: 1rem;
+        background-color: #fff;
+      }
+
+      .ql-container {
+        border: none;
+      }
+    }
+  }
+
+  .p-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+
+  .p-button-text {
+    color: #1e3a8a;
+    background-color: transparent;
+
+    &:hover {
+      background-color: rgba(30, 58, 138, 0.1);
+    }
+  }
+
+  .p-button-icon-left {
+    margin-right: 0.5rem;
+  }
+
+  .p-dialog-footer {
+    .p-button {
+      &.p-button-primary {
+        background-color: #1e3a8a;
+        border-color: #1e3a8a;
+
+        &:hover {
+          background-color: #1e3a8a;
+          box-shadow: 0 4px 10px rgba(30, 58, 138, 0.5);
+        }
+      }
+
+      &.p-button-text {
+        color: #1e3a8a;
+
+        &:hover {
+          background-color: rgba(30, 58, 138, 0.05);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .emailClient {
+    flex-direction: column;
+  }
+
+  .emailList {
+    width: 100%;
+    max-width: none;
+    border-right: none;
+  }
+
+  .emailDetail {
+    width: 100%;
+  }
+}
+
+
+// .email-client {
+//   display: flex;
+//   height: 100vh;
+//   width:100%;
+// }
+
+// .email-list {
+//   width: 30%;
+//   background-color: #f5f5f5;
+//   padding: 1rem;
+//   overflow-y: auto;
+// }
+
+// .email-item {
+//   padding: 0.5rem 1rem;
+//   cursor: pointer;
+//   border-bottom: 1px solid #ddd;
+// }
+
+// .email-item:hover {
+//   background-color: #eaeaea;
+// }
+
+// .email-detail-section {
+//   display: flex;
+//   flex: 1;
+// }
+
+// .email-detail {
+//   width: 70%;
+//   padding: 2rem;
+//   background-color: #ffffff;
+//   border-right: 1px solid #ddd; /* Adds a border between email detail and calendar */
+// }
+
+// .email-header {
+//   font-weight: bold;
+//   margin-bottom: 1rem;
+// }
+
+// .email-content {
+//   margin-top: 1rem;
+// }
+
+// .email-meta {
+//   font-size: 0.9rem;
+//   color: #888;
+//   margin-bottom: 1rem;
+// }
+
+// .calendar {
+//   width: 30%;
+//   padding: 2rem;
+//   background-color: #f9f9f9;
+// }
+
+// .calendar-header {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-bottom: 1rem;
+// }
+
+// .calendar-group {
+//   display: flex;
+// }
+
+// .calendar-button {
+//   padding: 0.5rem 0.6rem;
+//   border: none;
+//   background-color: #fff;
+//   cursor: pointer;
+//   margin-right: 1rem;
+//   border-radius: 4px;
+//   font-weight: bold;
+// }
+
+// .calendar-button:hover {
+//   background-color: #007bff;
+//   color: white;
+// }
+
+// .calendar-button-today {
+//   padding: 0.5rem 1rem;
+//   border: none;
+//   background-color: #fff;
+//   cursor: pointer;
+//   margin-left: auto; /* Push the Today button to the far right */
+//   border-radius: 4px;
+//   font-weight: bold;
+// }
+
+// .calendar-button-today:hover {
+//   background-color: #007bff;
+//   color: white;
+// }
+
+// .active {
+//   background-color: #007bff;
+//   color: white;
+// }
+
+// .calendar-events {
+//   margin-top: 1rem;
+// }
+
+// .calendar-event {
+//   padding: 0.5rem 0;
+//   border-bottom: 1px solid #ddd;
+// }

@@ -1,0 +1,147 @@
+$font-1: 12px;
+$font-2: 14px;
+$font-3: 16px;
+$font-4: 20px;
+$font-5: 25px;
+$color-1: #152838;
+$color-2: #818181;
+$bg: #f0f0f0;
+$border-color: #E0E0E0;
+$active-bg: #d1d1d1;
+$inactive-bg: #FFFFFF;
+
+.addJob {
+    background-color: $bg;
+    padding: 22px 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    .headline {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        h4 {
+            font-size: $font-3;
+            color: $color-1;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        span {
+            position: relative;
+            top: 1px;
+            background-color: #999999;
+            height: 1px;
+            width: 100%;
+        }
+    }
+
+    .job_details {
+        color: $color-1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        div {
+            label {
+                font-size: $font-3;
+            }
+        }
+
+        .selectButton {
+            width: 48%;
+            gap: 40px;
+            margin-right: 10px; 
+
+            button {
+                padding: 18px 0;
+                border-radius: 8px;
+                background-color: $inactive-bg;
+                border: 1px solid $border-color;
+                text-align: center;
+                font-size: $font-3;
+                color: #333;
+                font-weight: bold;
+
+                &.active {
+                    background-color: $active-bg;
+                }
+            }
+        }
+
+        p {
+            color: $color-2;
+            font-size: $font-2;
+        }
+    }
+
+    .tabContent {
+        padding: 12px;
+        border-radius: 8px;
+
+        &.internal {
+            background-color: $active-bg;
+        }
+
+        &.external {
+            background-color: $inactive-bg;
+            border: 1px solid $border-color;
+        }
+    }
+
+    .Employment_Details,
+    .Location_Details,
+    .Company_Details {
+        color: $color-1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .forceHeadline {
+            font-size: $font-3;
+        }
+
+        div {
+            label {
+                font-size: $font-3;
+            }
+
+            p {
+                font-size: $font-1;
+            }
+        }
+    }
+
+    .Company_Details {
+        .questions {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            h4, h5 {
+                font-size: $font-3;
+            }
+
+            .questionListItem {
+                margin-bottom: 24px;
+
+                .questionsHead {
+                    border-radius: 10px;
+                    padding: 10px 15px;
+                    background-color: #cbcbcb;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .add_Question {
+                width: max-content;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+name: talency.in Cap Build & Deploy
+env:
+  CAPROVER_HOST: 'https://captain.root.aolw.in/'
+  #remember to change the secret.app_token if changing the caprover_app  
+  CAPROVER_APP: home
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  cap_build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout the repo 
+        uses: actions/checkout@v4
+        with:
+         ref: main
+      - uses: a7ul/tar-action@v1.2.0
+        with:
+          command: c
+          cwd: "./"
+          files: |
+            ./
+          outPath: deploy.tar
+
+      - name: Deploy App to CapRover
+        uses: caprover/deploy-from-github@v1.1.2
+        with:
+          server: ${{ env.CAPROVER_HOST }}
+          app: ${{ env.CAPROVER_APP }}
+          token: '${{ secrets.APP_TOKEN }}'          

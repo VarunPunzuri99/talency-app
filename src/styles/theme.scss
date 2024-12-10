@@ -1,0 +1,37 @@
+$gap: 10px;
+
+:root {
+    /* theme color and text color */
+    --color-1: #e56a48;
+    --color-2: #152838;
+
+    --text-color-1: #152838;
+    --text-color-2: #000000;
+
+    --text-light: #a6a6a6;
+
+    --color-success: #13ce66;
+    --color-info: #3366ff;
+    --color-warn: #ffb020;
+    --color-danger: #ff000d;
+    --color-change-status: #008968;
+    --color-email: #152838;
+    --color-move-to: #1e649e;
+
+    /* background */
+    --bg-color-1: #e58d75;
+    --bg-color-2: #cecece;
+    --bg-color-3: #152838;
+    --bg-color-4: #f6f6f6;
+
+    /*	spacing */
+    --gap: 15px;
+    --gap-1: 15px;
+    --gap-2: 20px;
+
+    --white: #ffffff;
+    --border: 1px solid #dbdbdb;
+
+    /* shadows */
+    --shadow-1: 0px 4px 30px rgba(221, 224, 255, 0.54);
+}

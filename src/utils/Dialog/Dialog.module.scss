@@ -1,0 +1,27 @@
+.customDialog {
+  :global(.p-dialog-header) {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--surface-border);
+  }
+
+  :global(.p-dialog-content) {
+    padding: 0;  // Remove default padding since we're managing it with our content wrapper
+  }
+
+  .dialogContent {
+    padding: 1.5rem;
+  }
+
+  :global(.p-dialog-footer) {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--surface-border);
+
+    button {
+      margin-left: 0.5rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

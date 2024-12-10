@@ -1,0 +1,8 @@
+$gap: 30px;
+
+.dialog form {
+    padding: 30px 0;
+    display: flex;
+    gap: $gap;
+    flex-direction: column;
+}

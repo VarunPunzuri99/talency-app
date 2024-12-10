@@ -1,0 +1,45 @@
+date: 23/12/2023
+
+common:
+1: Only Active countries should come in api response
+2: Remove required file path from every status.
+3: How to delete a state.
+4: Only Active states should come.
+
+Country
+1: How to add multiple states like in India we have same tax indentifier in all the states.
+
+
+// check category
+
+Country
+1: add done
+2: view done
+3: update done
+4: all actions working
+
+Company
+1: add done
+2: view done
+3: update done
+4: all actions working
+
+Agency
+1: add done
+2: view done
+3: update done
+4: all actions working
+
+Freelancer
+1: add done
+2: view done
+3: update done
+4: all actions working
+
+
+// 24/02/2024
+accounts
+	sort by api
+	loading while search
+	move to
+	change status

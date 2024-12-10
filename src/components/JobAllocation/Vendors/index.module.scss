@@ -1,0 +1,145 @@
+
+.vendorsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // Create two equal columns
+  gap: 1rem; // Space between items
+  padding: 1rem;
+}
+
+
+.vendorAccordionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.vendorCard {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s;
+}
+
+.vendorCard:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;  
+}
+
+.vendorName {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+
+
+.jobIndicator {
+  display: flex;
+  height: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.jobIndicator span {
+  height: 100%;
+}
+
+.dialogContainer {
+  // display: flex;
+  // padding: 10px;
+  text-align: center;
+  overflow-y: auto;
+
+  // Header styling
+  .p-dialog-header {
+    background-color: #f4f6f8; 
+    color: #333; 
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  // Main content area styling
+  .p-dialog-content {
+    background-color: #fff;
+    padding: 1.5rem;
+    color: #555;
+  }
+
+
+  .dialogContent {
+    display: grid;
+    gap: 1rem;  
+    padding: 1rem;
+    text-align: center;
+    overflow-y: auto; 
+    max-height: 70vh;  
+    grid-template-columns: 1fr;
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  // Job detail styling within the dialog
+  .jobDetail {
+    display: flex;
+    flex-direction: column;
+    align-content:flex-start;
+    background-color: #f9fafb;
+    border: 1px solid #e0e4e8;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #666;
+      margin: 0.25rem 0;
+
+      // Styling for specific text like "Assigned Time" and "Due Time"
+      &:nth-child(2),
+      &:nth-child(3) {
+        font-weight: 500;
+      }
+    }
+
+    // Add icon or color to target profiles
+    // .targetProfiles {
+    //   // color: #007bff;
+    //   // font-weight: bold;
+    // }
+  }
+
+  // Footer button styling
+  .p-dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .closeButton {
+    background-color: rgb(230, 10, 6);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(255, 0, 0);
+    }
+  }
+}
+

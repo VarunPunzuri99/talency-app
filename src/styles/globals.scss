@@ -1,0 +1,278 @@
+@import './theme.scss';
+
+@font-face {
+    font-family: 'Dosis';
+    src: local('Dosis-Medium'),
+        url('./font/Dosis-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    // font-family: 'Lato';
+    font-family: 'Dosis', sans-serif;
+    // background: #eff3f8;
+}
+
+.container {
+    margin: 0 auto;
+    width: clamp(300px, 100%, 1340px);
+}
+
+.p-component {
+    font-family: 'Dosis', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+
+    &:disabled {
+        opacity: 0.6;
+        pointer-events: 'none';
+    }
+}
+
+// horizontal Line
+.hr {
+    border-bottom: 1px solid #dcdcdc;
+    width: 100%;
+
+    &.margin {
+        margin: 10px 0;
+    }
+}
+
+.tag {
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 4px 8px;
+    text-transform: capitalize;
+
+    &.active {
+        background: #d0ffbf;
+        color: #038400;
+    }
+
+    &.closed {
+        background: #ffd7d7;
+        color: #f00;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+input::placeholder {
+    color: rgba(180, 180, 180, 0.7);
+}
+
+input::-ms-input-placeholder {
+    color: green;
+}
+
+input::-ms-input-placeholder {
+    color: green;
+}
+
+.p-button {
+    color: #ffffff;
+    background-color: var(--color-1);
+    border: 1px solid var(--color-1);
+    overflow: unset !important;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    .p-button-label {
+        font-weight: 400 !important;
+    }
+
+    &.p-button-outlined {
+        background-color: transparent;
+        color: var(--color-1);
+
+        &:hover {
+            background-color: var(--color-1) !important;
+            color: #ffffff !important;
+        }
+    }
+
+    &.secondary,
+    &.p-button-secondary {
+        background-color: var(--color-2);
+        border: 1px solid var(--color-2);
+
+        &.p-button-outlined {
+            background-color: transparent;
+            color: var(--color-2);
+
+            &:hover {
+                background-color: var(--color-2) !important;
+                color: #ffffff !important;
+            }
+        }
+    }
+
+    &.p-button-danger {
+        background-color: #ff0000;
+        border: 1px solid #ff0000;
+
+        &.p-button-outlined {
+            background-color: transparent;
+            color: #ff0000;
+
+            &:hover {
+                background-color: #ff0000 !important;
+                color: #ffffff !important;
+            }
+        }
+    }
+}
+
+// input
+.p-inputtext {
+    width: 100%;
+}
+
+.filterDropdown{
+    .p-inputtext     {
+      font-size: 11px !important;
+    }
+  }
+
+
+// dialog Box
+.p-dialog .p-dialog-header,
+.p-dialog .p-dialog-content {
+    padding: 1rem;
+}
+
+.p-dialog .p-dialog-content {
+    padding-top: 1rem !important;
+}
+
+.p-dialog-header {
+    padding: .5rem !important;
+}
+
+.p-dialog-content {
+    padding: 1rem !important;
+    overflow: hidden !important;
+}
+
+
+
+.loader {
+    gap: 10px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    align-content: center;
+
+}
+
+.image_box {
+    position: relative;
+    height: 70px;
+    width: 150px;
+}
+.dots {
+    width: 56px;
+    height: 27px;
+    background:
+        radial-gradient(circle closest-side,#e56a48 90%, #0000) 0%
+            50%,
+        radial-gradient(circle closest-side,#e56a48 90%, #0000) 50%
+            50%,
+        radial-gradient(circle closest-side,#e56a48 90%, #0000) 100%
+            50%;
+    background-size: calc(100% / 3) 13.4px;
+    background-repeat: no-repeat;
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+    20% {
+        background-position:
+            0% 0%,
+            50% 50%,
+            100% 50%;
+    }
+
+    40% {
+        background-position:
+            0% 100%,
+            50% 0%,
+            100% 50%;
+    }
+
+    60% {
+        background-position:
+            0% 50%,
+            50% 100%,
+            100% 0%;
+    }
+
+    80% {
+        background-position:
+            0% 50%,
+            50% 50%,
+            100% 100%;
+    }
+}

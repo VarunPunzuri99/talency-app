@@ -1,0 +1,59 @@
+.feedback {
+    h3,
+    h5,
+    h6,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 30px;
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        row-gap: 40px;
+        border: 1px solid white;
+        padding: 30px;
+        border-radius: 20px;
+
+        input {
+            flex-basis: calc(50% - 20px);
+
+            &:last-of-type {
+                flex-basis: 100%;
+            }
+        }
+
+        button {
+            margin: 0 auto;
+            border-radius: 20px;
+            background: var(--bg-color-2);
+            padding: 10px 0px;
+            width: 200px;
+            border: none;
+            font-weight: 600;
+        }
+    }
+
+    .socialAccounts {
+        text-align: center;
+
+        span {
+            font-size: 0.8rem;
+            color: var(--bg-color-2);
+        }
+
+        i {
+            font-size: 1.5rem;
+            margin: 15px 20px;
+        }
+    }
+}

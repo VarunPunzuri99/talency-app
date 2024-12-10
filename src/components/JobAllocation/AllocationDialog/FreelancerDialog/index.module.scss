@@ -1,0 +1,30 @@
+// // internals/contacts, recruitment-team, vendor-team, contacts/add and sales/accounts, contacts, tasks, clients/add
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr; // Two columns, equal width
+  gap: 1rem; // Space between cards
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Main container for flex alignment */
+// .buttonContainer {
+//   display: flex;
+//   flex-direction: column; /* Stack items vertically */
+//   height: 100%; /* Full height of the dialog or parent container */
+//   padding: 1rem;
+// }
+
+/* Button group to align items to the bottom-right */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto; /* Pushes the buttons to the bottom */
+  justify-content: flex-end; /* Aligns buttons to the right */
+  // margin-left: 20%;
+}

@@ -1,0 +1,6 @@
+.delete_modal {
+  :global(.p-fileupload-choose) {
+    border: 0;
+    background: var(--color-2) !important;
+  }
+}
