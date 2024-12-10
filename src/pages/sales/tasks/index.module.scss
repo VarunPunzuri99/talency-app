@@ -1,0 +1,194 @@
+.title_actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .filter_by {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        label {
+            color: #b8b8b8;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}
+
+.wrapper {
+
+    :global(.p-accordion-tab) {
+        margin-bottom: 1rem;
+    }
+
+    .box {
+        gap: 15px;
+        display: grid;
+        padding: 2rem;
+        margin-top: 1rem;
+        border-radius: 12px;
+        background: var(--surface-card);
+        grid-template-columns: 30px 1fr 1fr;
+        border: 1px solid var(--surface-border);
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .icon_section {
+            position: relative;
+            height: 30px;
+            width: 30px;
+        }
+
+        .account_section {
+            .title {
+                color: var(--text-color-1);
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            .account_and_assigned {
+                margin-top: 15px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                .round_box {
+                    height: 50px;
+                    width: 50px;
+                    display: grid;
+                    place-items: center;
+                    border-radius: 50%;
+                    border: 1px solid #e7e7e7;
+                }
+
+                .name {
+                    color: var(--text-color-1);
+
+                    font-size: 16px;
+
+                    font-weight: 500;
+                }
+
+                .assigned_to {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    color: #7e7e7e;
+
+                    font-size: 12px;
+
+                    font-weight: 500;
+
+                    .avatars {
+                        img {
+                            object-fit: cover;
+                        }
+
+                        :global(.p-avatar-circle) {
+                            margin-left: -0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right_section {
+            .time_section {
+                gap: 10px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                .date {
+                    color: #8e8e8e;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+            .buttons_section {
+                margin-top: 20px;
+                gap: 10px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+
+        .noTaskMessage {
+            font-size: 16px; /* Adjust the font size */
+            color: #c43b3b; /* A neutral gray color for the message text */
+            text-align: center; /* Center the text */
+            padding: 20px; /* Add some padding around the message */
+            background-color: #f9f9f9; /* A light background color for emphasis */
+            border: 1px solid #ddd; /* A subtle border to distinguish the message area */
+            border-radius: 8px; /* Rounded corners for a softer look */
+            margin-top: 20px; /* Space above the message */
+        }
+    }
+}
+
+.resolve_task_dialog {
+
+    :global(.p-dialog-content),
+    :global(.p-dialog-header) {
+        padding: 1rem !important;
+    }
+
+    :global(.p-dialog-header) {
+        border-radius: 10px 10px 0px 0px;
+        background: var(--text-color-1);
+        color: var(--white);
+        padding: 10px;
+
+        svg {
+            fill: var(--white);
+            color: var(--white);
+        }
+    }
+
+    .body {
+        gap: 15px;
+        display: flex;
+        padding: 15px;
+        flex-direction: column;
+
+        label {
+            display: block;
+        }
+
+        span {
+            cursor: pointer;
+            display: inline-flex;
+            gap: 5px;
+        }
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border-top: var(--border);
+        justify-content: space-between;
+
+        .left_section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
+
+.noTaskMessage {
+    font-size: 16px; 
+    color: #c43b3b; 
+    text-align: center; /* Center the text */
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    margin-top: 20px; 
+}

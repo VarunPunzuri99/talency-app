@@ -1,0 +1,82 @@
+// internals/contacts, recruitment-team, vendor-team, contacts and sales/accounts, contacts, tasks, clients
+$gap: 20px;
+$border: 1px solid #d6d6d6;
+
+.left_section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 1rem;
+  
+
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination span {
+  margin: 0 10px;
+}
+
+.filters {
+  display: flex;
+  padding-top: 10px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+
+  .right_section,
+  .left_section {
+      display: flex;
+      align-items: center;
+      gap: $gap;
+  }
+
+  .icons {
+      font-size: 1.5rem;
+      border: var(--border);
+      border-radius: 4px;
+      padding: 5px;
+      cursor: pointer;
+
+      &:first-child {
+          color: var(--color-1);
+          border-color: var(--color-1);
+      }
+  }
+}
+
+.dialogContent {
+  p {
+    margin: 0; // Remove default margins for paragraphs
+  }
+
+  .dialogHeader {
+    font-size: 1.2rem; // Larger font size for the first sentence
+    font-weight: bold; // Optional: make it bold
+    margin-bottom: 0.5rem;
+  }
+
+  .dialogBody {
+    font-size: 1rem; // Smaller font size for the second sentence
+  }
+  .dialogBody .highlight {
+    color: rgb(229, 106, 72); // Add your desired color
+  }
+  
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; // Add spacing above the pagination
+  padding-bottom: 2rem; // Optional padding at the bottom
+}
+
+// Ensure that the page has enough space for content and pagination
+.pageContent {
+  min-height: calc(100vh - 200px); // Adjust based on your header/footer height
+}

@@ -1,0 +1,493 @@
+.teamButton {
+  padding: 8px 8px 14px 8px;
+  // border: none;
+  background-color: white;
+  color: rgb(75, 85, 99);
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 400;
+  // transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow by default */
+  border: 1px solid rgb(229, 231, 235);
+}
+
+// .active {
+//   border-left: 3px solid rgb(6, 182, 212); /* Same color as hover */
+//   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Keep darker shadow */
+// }
+.placeholderText {
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.treeCursor .p-treenode-content {
+  cursor: pointer;
+}
+
+// Vendor styles
+.vendorsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.vendorAccordionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.vendorCard {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #e6f7ff;
+    cursor: pointer;  
+  }
+}
+
+.vendorName {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+// Freelancer styles
+.freelancerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 200px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.draggingOver {
+  background-color: #e6f7ff;
+  border-color: #007ad9;
+}
+
+// Dialog styles
+.dialogContainer {
+  text-align: center;
+  overflow-y: auto;
+
+  .p-dialog-header {
+    background-color: #f4f6f8; 
+    color: #333; 
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .p-dialog-content {
+    background-color: #fff;
+    padding: 1.5rem;
+    color: #555;
+  }
+
+  .dialogContent {
+    display: grid;
+    gap: 1rem;  
+    padding: 1rem;
+    text-align: center;
+    overflow-y: auto; 
+    max-height: 70vh;  
+    grid-template-columns: 1fr;
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+
+  .jobDetail {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    background-color: #f9fafb;
+    border: 1px solid #e0e4e8;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin: 0.25rem 0;
+      text-align: left;
+    }
+  }
+}
+
+.closeButton {
+  padding: 0.5rem 1rem;
+  background-color: #f4f6f8;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #e6f7ff;
+  }
+}
+
+.teamContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.4rem;
+  justify-content: flex-start;
+}
+
+.teamLeadAccordion {
+  width: 100%;
+  max-width: 300px;
+}
+
+.memberAccordionContainer {
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  // gap: 1rem; /* Optional: Add space between items */
+}
+
+// .memberCard {
+//   flex: 1 1 calc(50% - 1rem); /* Adjusts to two columns, with gap */
+//   min-width: 200px; /* Minimum width before wrapping */
+//   box-sizing: border-box;
+// }
+
+/* Adjust based on screen size */
+// @media (max-width: 600px) {
+//   .memberCard {
+//     flex: 1 1 100%; /* Stack items on smaller screens */
+//   }
+// }
+
+.memberCard {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s;
+}
+
+.memberCard:hover {
+  background-color: #e6f7ff;
+  cursor: pointer;  
+}
+
+.memberName {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.jobIndicator {
+  display: flex;
+  height: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.jobIndicator span {
+  height: 100%;
+}
+
+
+.dialogContainer {
+  // display: flex;
+  // padding: 10px;
+  text-align: center;
+  // overflow-y: auto;
+
+  // Header styling
+  .p-dialog-header {
+    background-color: #f4f6f8; 
+    color: #333; 
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  // Main content area styling
+  .p-dialog-content {
+    background-color: #fff;
+    padding: 1.5rem;
+    color: #555;
+  }
+
+  .dialogContent {
+    display: grid;
+    gap: 1rem; /* Space between items */
+    padding: 1rem;
+    text-align: center;
+    overflow-y: auto; /* Allows vertical scrolling when content overflows */
+    
+    /* Ensure it doesn't grow indefinitely */
+    max-height: 70vh; /* Adjust this value as needed to fit your layout */
+  
+    grid-template-columns: 1fr;
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    }
+  }
+  // Job detail styling within the dialog
+  .jobDetail {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    background-color: #f9fafb;
+    border: 1px solid #e0e4e8;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #666;
+      margin: 0.25rem 0;
+
+      // Styling for specific text like "Assigned Time" and "Due Time"
+      &:nth-child(2),
+      &:nth-child(3) {
+        font-weight: 500;
+      }
+    }
+
+    // Add icon or color to target profiles
+    // .targetProfiles {
+    //   // color: #007bff;
+    //   // font-weight: bold;
+    // }
+  }
+
+  // Footer button styling
+  .p-dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .closeButton {
+    background-color: rgb(230, 10, 6);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(255, 0, 0);
+    }
+  }
+}
+
+/* dayTimeline - This is the container for each day's timeline */
+.dayTimeline {
+  margin: 20px 0;
+}
+
+/* Label for the Day (Today, Tomorrow, etc.) */
+.dayLabel {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Timeline container */
+.timelineContainer {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* The horizontal timeline line */
+.timeline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #e0e0e0;
+  width: 100%;
+}
+
+/* The job block within the timeline */
+.jobBlock {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #2196f3; /* Blue color for jobs */
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Hour labels (9 AM, 12 PM, etc.) */
+.hourLabels {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.hourLabel {
+  width: 25%;
+  text-align: center;
+}
+
+.p-panel .p-panel-header {
+  border: 1px solid #fff;
+  padding: 1.25rem;
+  background: #fff;
+  color: #374151;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+
+.dateNavigation {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  // gap: 0.5rem;
+  // margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+.currentDate {
+  font-size: 1rem;
+  font-weight: 500;
+  min-width: 150px;
+  text-align: center;
+}
+
+
+.droppableMember,
+.droppableLead,
+.vendorCard {
+  min-height: 50px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  
+  &.droppableHighlight {
+    border-color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.05);
+  }
+}
+
+.vendorCard {
+  padding: 12px;
+  margin-bottom: 8px;
+  background: white;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+.droppableMember,
+.droppableLead {
+  margin: 4px 0;
+  padding: 8px;
+}
+
+.leadDroppable {
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  
+  &.draggingOver {
+    border-color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.05);
+  }
+}
+
+.memberDroppable {
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  
+  &.draggingOver {
+    border-color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.05);
+  }
+}
+
+.teamLeadContainer {
+  width: 100%;
+  margin-bottom: 12px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.noMembers {
+  color: #64748b;
+  font-size: 14px;
+  padding: 12px;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}

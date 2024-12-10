@@ -1,0 +1,58 @@
+/* CustomRangeSlider.module.css */
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .slider_track {
+        flex-basis: calc(100% + 12px);
+        width: calc(100% + 12px);
+        position: relative;
+        background-color: #DADADA;
+        cursor: pointer;
+        height: 10px;
+    }
+
+    .pointsMarker {
+        height: 20px;
+        width: 5px;
+        background-color: #bdbcbc;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .marks {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+
+        .mark {
+            position: absolute;
+            font-size: 18px;
+            color: #333;
+            bottom: 0px;
+            transform: translate(-50%, 20px);
+
+            &.active {
+                color: #e56846 !important;
+            }
+        }
+    }
+
+
+    .slider_thumb {
+        position: absolute;
+        top: 50%;
+        transform-origin: top center;
+        transform: translateY(-50%);
+        scale: 1;
+        width: 20px;
+        height: 20px;
+        background-color: #e56846;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+}

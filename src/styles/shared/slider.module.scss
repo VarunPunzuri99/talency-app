@@ -1,0 +1,31 @@
+// components/Workflow/screenselect, jobs/application, jobs/application/[view], jobs/recruiter-form
+
+.slider {
+  bottom: 5px;
+  :global(.rc-slider-rail) {
+      background-color: #dadada;
+      height: 7px;
+  }
+  :global(.rc-slider-track) {
+      background-color: #dadada;
+  }
+  :global(.rc-slider-mark-text) {
+      margin-top: 6px;
+  }
+  :global(.rc-slider-dot) {
+      width: 2px;
+      height: 15px;
+      bottom: -7px;
+      border-radius: 0;
+      border-color: #cbcbcb;
+  }
+  :global(.rc-slider-handle) {
+      width: 29px;
+      height: 29px;
+      margin-top: -12px;
+      background-color: #e56846;
+      border: solid 0px #96dbfa;
+      border-radius: 50%;
+      opacity: 1;
+  }
+}

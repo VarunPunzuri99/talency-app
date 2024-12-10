@@ -1,0 +1,65 @@
+// MoveTo and Change status has same styles
+
+.email_module {
+  :global(.p-dialog-header) {
+      padding: 15px !important;
+      border-radius: 10px 10px 0px 0px !important;
+      background: rgb(229, 141, 117) !important; // MoveToModal
+      background: #008968; // ChangeStatus Modal
+      color: var(--white);
+
+      button {
+          color: var(--white) !important;
+
+          &:hover {
+              color: var(--text-color-2) !important;
+          }
+      }
+
+      :global(.p-dialog-title) {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+      }
+  }
+
+  :global(.p-dialog-content) {
+      padding: 1rem !important;
+
+      .body {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 0 20px;
+          padding-bottom: 10px;
+
+          label {
+              color: var(--text-color-2);
+              font-size: 20px;
+              font-weight: 500;
+          }
+      }
+
+      .follow_up {
+          padding: 10px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-top: 1px solid #e9e9e9;
+          border-bottom: 1px solid #e9e9e9;
+
+          .check_box_section {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+          }
+
+          button {
+              color: var(--white);
+              border-radius: 10px;
+              background: #e56846;
+              padding: 10px 20px;
+          }
+      }
+  }
+}

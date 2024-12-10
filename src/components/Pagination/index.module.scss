@@ -1,0 +1,8 @@
+.wrapper {
+    margin: 20px 0 0 0;
+    :global(.p-highlight) {
+        // border-radius: 10px;
+        color: var(--white) !important;
+        background: #e56846 !important;
+    }
+}

@@ -1,0 +1,176 @@
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+.bg-meet-blue {
+    background-color: #e56a48;
+    
+}
+.bg-meet-blue:hover {
+    background-color: #e56a48da !important;   
+}
+
+.border-white {
+    border-color: #e56a48 !important;
+}
+
+ .str-video__speech-indicator {
+    gap: 1.5px;
+  }
+.str-video__paginated-grid-layout__group {
+    height: 100%;
+    max-width: 85%;
+    margin: 10px auto;
+    background: #eeeeee;
+    border-radius: 20px;
+    position: relative;
+}
+.str-video__paginated-grid-layout {
+    height: 80vh;
+}
+.participantViewWrapper {
+    height: 100%;
+    overflow: hidden;
+}
+.participantViewWrapper #preview2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+div[role="dialog"] {
+    background-color: white;
+    max-width: 70vw !important;
+}
+
+.newDesignLayout {
+    padding: 1rem;
+    overflow: auto;
+    height: calc(100vh - 64px);
+    width: 100%;
+}
+
+.loader {
+    gap: 10px;
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+
+}
+
+.image_box {
+    position: relative;
+    height: 70px;
+    width: 150px;
+}
+.dots {
+    width: 56px;
+    height: 27px;
+    background:
+        radial-gradient(circle closest-side,#e56a48 90%, #0000) 0%
+            50%,
+        radial-gradient(circle closest-side,#e56a48 90%, #0000) 50%
+            50%,
+        radial-gradient(circle closest-side,#e56a48 90%, #0000) 100%
+            50%;
+    background-size: calc(100% / 3) 13.4px;
+    background-repeat: no-repeat;
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+    20% {
+        background-position:
+            0% 0%,
+            50% 50%,
+            100% 50%;
+    }
+
+    40% {
+        background-position:
+            0% 100%,
+            50% 0%,
+            100% 50%;
+    }
+
+    60% {
+        background-position:
+            0% 50%,
+            50% 100%,
+            100% 0%;
+    }
+
+    80% {
+        background-position:
+            0% 50%,
+            50% 50%,
+            100% 100%;
+    }
+}
+
+.bg-color-for-hover-part {
+    background: #7d7d7db2;
+}
+
+
+.meet-nav {
+display: flex;
+padding: 0 1rem;
+align-items: center;
+justify-content: space-between;
+}
+
+.meet-nav-logo {
+    img {
+        margin-top: 5px;
+    }
+}
+
+.makeItfullHeight {
+    height: 100vh !important;
+}
+.mainWrapper {
+    display: flex;
+    min-height: 100svh;
+    flex-direction: column;
+}
+
+.ccWrapper {
+    width: 70%;
+    margin: 10px auto;
+    font-size: 15px;
+}
+
+.withccWrapper > .str-video__paginated-grid-layout {
+    height: 87vh;
+}
+/* Add these to your global CSS file (globals.css or _app.js) */
+/* Styling for h1 and h2 */
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Styling for ordered and unordered lists */
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}

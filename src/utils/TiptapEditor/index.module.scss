@@ -1,0 +1,67 @@
+/* Styles for mentions */
+.mention {
+    background-color: #6db686;
+    /* Slightly lighter green for contrast */
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 0.1rem 0.3rem;
+}
+
+/* Editor container styles */
+.editor {
+    border: 1px solid #ddd;
+    min-height: 200px;
+    padding: 12px;
+    border-radius: 6px;
+    // background-color: #f4f4f9;
+    /* Soft background for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s;
+
+    &:hover {
+        border-color: #bbb;
+        /* Slightly darker border on hover */
+    }
+
+    &:focus-within {
+        border-color: #6db686;
+        /* Highlight border when editor is focused */
+    }
+}
+
+/* Table-specific styling */
+// .editor table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     margin-top: 16px;
+//     overflow: hidden;
+//     table-layout: fixed;
+
+//     th,
+//     td {
+//         border: 1px solid #ddd;
+//         padding: 8px;
+//         text-align: left;
+//         vertical-align: top;
+//         background-color: #fff;
+//         font-size: 0.95em;
+//         position: relative; /* Ensure cells are positioned relative to the table */
+//     }
+
+//     th {
+//         background-color: #e9e9f2;
+//         font-weight: bold;
+//     }
+
+//     /* Column resize handle */
+//     .column-resize-handle {
+//         width: 4px;
+//         background-color: #6db686;
+//         position: absolute;
+//         right: -2px;
+//         top: 0;
+//         bottom: 0;
+//         z-index: 2;
+//         cursor: ew-resize; /* Use ew-resize for column resizing */
+//     }
+// }

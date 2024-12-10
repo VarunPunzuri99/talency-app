@@ -1,0 +1,96 @@
+.accordion {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  // Nested accordion styling
+  .accordion {
+    border: none;
+    box-shadow: none;
+    margin: 0.5rem 0;
+    
+    .accordionItem {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      
+      &:last-child {
+        margin-bottom: 5px;
+      }
+      
+      .accordionHeader {
+        background-color: #f8fafc;
+        
+        div {
+          font-size: 0.875rem;
+          font-weight: 500;
+          letter-spacing: 0.01em;
+        }
+      }
+      
+      .accordionContent {
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+
+.accordionItem {
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  transition: all 0.2s ease;
+
+  div {
+    font-weight: 500;
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1e293b;
+  }
+
+  span {
+    color: #64748b;
+    font-size: 1.25rem;
+    font-weight: 400;
+    transition: transform 0.2s ease;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #f1f5f9;
+    }
+  }
+}
+
+.accordionContent {
+  padding: 1.25rem 1.5rem;
+  background-color: #ffffff;
+  color: #475569;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  border-top: 1px solid #e2e8f0;
+  animation: slideDown 0.3s ease-in-out;
+}

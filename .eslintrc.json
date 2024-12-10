@@ -1,0 +1,45 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "next"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-unused-imports": "off",
+    "react/prop-types": "off",
+   "@typescript-eslint/no-explicit-any": "off",
+   "@typescript-eslint/no-unused-vars": [
+  "warn",
+  {
+    "vars": "all",
+    "varsIgnorePattern": "^_",
+    "args": "after-used",
+    "argsIgnorePattern": "^_"
+  }
+],
+   "@typescript-eslint/no-duplicate-enum-values": "off",
+   "react-hooks/exhaustive-deps": "off",
+   "react-hooks/rules-of-hooks": "off",
+   "@next/next/no-img-element": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

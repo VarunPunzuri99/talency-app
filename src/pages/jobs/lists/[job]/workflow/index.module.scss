@@ -1,0 +1,425 @@
+$border_color:#DADADA;
+
+.workspace {
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    // * {
+    //     margin: 0;
+    //     padding: 0;
+    //     box-sizing: border-box;
+    // }
+
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 20px;
+        border-bottom: 1px solid $border_color;
+    }
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+
+        .mainLeftSection {
+            display: flex;
+            flex-basis: 90%;
+            height: 100%;
+            .AccordionTab {
+                width: 80px;
+                height: calc(100vh - 205px);
+                transition: all .7s ease-in-out;
+                transform-origin: left center;
+
+                &.active {
+                    width: 450px;
+                }
+
+                &.fullView {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .AccordionTabHeader {
+                    border: 1px solid #DADADA;
+                    border-top: none;
+                    cursor: pointer;
+                    height: 100%;
+
+                    span {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            margin-top: 15px;
+                            font-size: 1.2rem;
+                        }
+
+                        p {
+                            white-space: nowrap;
+                            transform-origin: center;
+                            rotate: 90deg;
+                            transform: translateX(55%);
+                            position: absolute;
+                            font-size: 1.2rem;
+                            text-transform: capitalize;
+                            font-weight: 600;
+                            letter-spacing: 2px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: calc(90vh - 200px); 
+                        }
+                    }
+                }
+
+                .tabContent {
+                    .tabContentHeader {
+                        width: 100%;
+                        opacity: .3;
+                        padding: 8px;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        border: 1px solid $border_color;
+                        border-top: none;
+                        cursor: pointer;
+                        overflow: hidden;
+                        transform-origin: left center;
+                        animation: opac .7s 1 forwards;
+
+                        .leftSection {
+                            display: flex;
+                            flex: 0 0 70%; /* Left section takes 70% of the width */
+                            white-space: nowrap;
+                            gap: 15px;
+                            align-items: center;
+
+                            h4 {
+                                font-size: 1rem;
+                                font-weight: 600;
+                                letter-spacing: 2.2px;
+                                text-transform: capitalize;
+                            }
+
+                            i {
+                                font-size: 1.5rem;
+                            }
+
+                        }
+
+                        .rightSection {
+                            display: flex;
+                            flex: 0 0 30%; /* Right section takes 30% of the width */
+                            justify-content: flex-end; /* Align items to the end */
+                            gap: 15px;
+
+                            i {
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        @keyframes opac {
+                            to {
+                                width: 100%;
+                                opacity: 1;
+                                background-color: aliceblue;
+                            }
+                        }
+                    }
+
+                    .tabContent_Data {
+                        height: 69.5vh;
+                        overflow-y: auto;
+                        border: 1px solid #dadada;
+                        border-top: none;
+                    }
+                }
+            }
+        }
+
+        .mainRightSection {
+            flex-basis: 10%;
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+
+            .fullView_tab_item {
+                width: 100%;
+                text-align: center;
+                padding: 1.8rem 0rem;
+                border: 1px solid $border_color;
+                font-size: 1rem;
+                text-transform: capitalize;
+                font-weight: 600;
+                letter-spacing: 1.1px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar {
+  width: 50%;
+
+  .edit {
+      padding-bottom: 100px;
+
+      .head {
+          color: #152838;
+          font-size: 20px;
+          font-weight: 600;
+          padding-bottom: 10px;
+          margin-bottom: 30px;
+          border-bottom: 1px solid #D7D7D7;
+      }
+
+      .list {
+          list-style: none;
+          padding: 0px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          position: relative;
+
+          .item {
+              border-radius: 10px;
+              border: 1px solid #dedede;
+              padding: 10px;
+              background-color: #F8F8F8;
+
+              .child {
+                  text-align: center;
+                  padding: 10px 0px;
+                  border: 1px solid #dedede;
+                  background-color: transparent;
+                  border-radius: 10px;
+                  width: 130px;
+
+                  p {
+                      font-size: 16px;
+                      color: #152838;
+                  }
+              }
+
+              .inputItem {
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  gap: 20px;
+                  padding: 10px 20px;
+
+                  .inputItemChild {
+                      grid-column: span 1;
+
+                      label {
+                          display: block;
+                          font-weight: 500;
+                          font-size: 16px;
+                          margin-bottom: 5px;
+                          color: #152838;
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+  .addWorkflow {
+      padding-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .head {
+          color: #152838;
+          font-size: 20px;
+          font-weight: 600;
+          padding-bottom: 10px;
+          border-bottom: solid #D7D7D7;
+      }
+
+      .inputItemChild {
+          display: flex;
+          flex-direction: column;
+
+          label {
+              padding-bottom: 5px;
+          }
+
+          input {
+              background-color: #F3F3F3;
+          }
+      }
+
+      .list {
+          list-style: none;
+          padding: 0px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          position: relative;
+
+          .child {
+              text-align: center;
+              padding: 10px 0px;
+              border: 1px solid #dedede;
+              background-color: transparent;
+              border-radius: 10px;
+              width: 130px;
+
+              p {
+                  font-size: 16px;
+                  color: #152838;
+              }
+          }
+
+      }
+
+      div.item {
+          background-color: #F6F6F6;
+          padding: 15px 25px;
+          border-radius: 8px;
+
+          h5 {
+              font-size: 16px;
+              margin-bottom: 30px;
+          }
+
+          .inputItem {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 20px;
+              padding: 10px 20px;
+
+              .inputItemChild {
+                  grid-column: span 1;
+
+                  label {
+                      display: block;
+                      font-weight: 500;
+                      font-size: 16px;
+                      margin-bottom: 5px;
+                      color: #152838;
+                  }
+              }
+          }
+      }
+  }
+
+  .footer {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      background-color: white;
+
+      button {
+          padding: 10px 20px;
+          border-radius: 5px;
+          width: 150px;
+          border: none;
+          font-weight: 600;
+          color: white;
+
+          &:nth-of-type(1) {
+
+              background-color: #FF0000;
+          }
+
+          &:nth-of-type(2) {
+              background-color: #152838;
+          }
+      }
+  }
+}
+
+.search-input-bottom-border {
+  // border: none;            /* Remove all borders */
+  border: 1px solid #000; /* Apply a solid bottom border, adjust color and width as needed */
+  outline: none;           /* Remove the default focus outline */
+  padding: 3.5px;            /* Adjust padding if needed */
+  width: 100%;             /* Ensure it takes the full width */
+}
+
+.search-input-bottom-border:focus {
+  border-color: #007bff; /* Change the bottom border color on focus (optional) */
+  border: 1px solid #000; /* Apply a solid bottom border, adjust color and width as needed */
+
+}
+
+
+.noCandidatesMessage {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+.editWorkflowButton {
+  font-size: 12px;
+  padding: 4px;
+  width: 30px;
+  background-color: white;
+  color: black;
+  border: 0;
+  height: 30px;
+}
+
+.sortEnabled {
+height: 8px;
+position: absolute;
+top: -7px;
+right: -9px;
+border-radius: 50%;
+width: 8px;
+background-color: green;
+}
+
+.p-accordion {
+  padding: 10px;
+}
+.p-accordion-header {
+  padding: 10px;
+}
+.p-accordion-content {
+  padding: 10px;
+}
+
+.draggableCard {
+  cursor: grab;  /* Makes the cursor appear as a hand when hovering over the card */
+}
+
+/* Optional: Add a 'dragging' state to change the cursor when dragging */
+.draggableCard:active {
+  cursor: grabbing;  /* Changes the cursor to a 'grabbing' hand when dragging */
+}

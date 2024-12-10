@@ -1,0 +1,77 @@
+// components/workflow/AddWorkflow, EditWorkflow
+
+.addWorkflow {
+  .form {
+    display: grid;
+    gap: 1rem;
+
+    .deleteButton {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    .addButton {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.dragging {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+// .cardContent {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 15px;
+// }
+
+.fixedCard {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.deleteButton {
+  margin-top: 10px;
+}
+
+.addButton {
+  margin-top: 20px;
+}
+
+
+.dialog_buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;  /* Add gap between buttons */
+  margin-top: 1rem;
+}

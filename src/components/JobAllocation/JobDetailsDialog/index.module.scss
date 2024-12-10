@@ -1,0 +1,80 @@
+.dialogContainer {
+  display: grid;
+  gap: 1rem; /* Space between items */
+  padding: 1rem;
+  text-align: center;
+
+  /* Default: Single column (for screens smaller than 600px) */
+  grid-template-columns: 1fr;
+
+  /* Two columns for screens 600px and above */
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  }
+  .p-dialog-header {
+    background-color: #f4f6f8; 
+    color: #333; 
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .p-dialog-content {
+    background-color: #fff;
+    padding: 1.5rem;
+    color: #555;
+  }
+
+  .jobDetail {
+    background-color: #f9fafb;
+    border: 1px solid #e0e4e8;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #666;
+      margin: 0.25rem 0;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        font-weight: 500;
+      }
+    }
+
+    .targetProfiles {
+      color: #007bff;
+      font-weight: bold;
+    }
+  }
+
+  .p-dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .closeButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

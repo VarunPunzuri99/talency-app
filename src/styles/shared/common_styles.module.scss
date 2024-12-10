@@ -1,0 +1,452 @@
+
+// In Cards
+
+.wrapper {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+// No data found (1)
+.wrapper {
+  height: 300px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+// components/Pagination (1)
+
+.wrapper {
+  margin: 20px 0 0 0;
+  :global(.p-highlight) {
+      // border-radius: 10px;
+      color: var(--white) !important;
+      background: #e56846 !important;
+  }
+}
+
+// sales/accounts/[slug]
+
+.wrapper {
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  // box-shadow: var(--shadow-1);
+  border-radius: 12px;
+}
+
+
+// sales/accounts, clients, contacts/[slug]
+
+.wrapper {
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  // box-shadow: var(--shadow-1);
+  border-radius: 12px;
+
+  .search_bar {
+      position: relative;
+
+      input {
+          border: 0;
+          width: 100%;
+          padding: 10px;
+          padding-left: 30px;
+          border-bottom: 1px solid #dfdfdf;
+          &:focus-visible {
+              outline: none;
+          }
+
+          &::placeholder {
+              color: #ccc;
+
+              font-size: 16px;
+
+              font-weight: 500;
+          }
+      }
+
+      i {
+          position: absolute;
+          left: 5px;
+          color: #dfdfdf;
+          bottom: 12px;
+      }
+  }
+
+  .tabs {
+      margin: 1rem 0;
+
+      :global(.p-tabview-nav) {
+          border: 0;
+          padding: 5px;
+          border-radius: 8px;
+          background: rgba(238, 238, 238, 1);
+
+          li {
+              &:global(.p-highlight) {
+                  background: #fff;
+                  border-radius: 8px;
+              }
+
+              &:global(.p-tabview-ink-bar) {
+                  display: none;
+              }
+
+              div {
+                  cursor: pointer;
+                  padding: 10px;
+              }
+          }
+      }
+
+      :global(.p-tabview-panels) {
+          padding: 1rem 0 0 0 !important;
+      }
+
+      .filter_row {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          label {
+              color: var(--text-light);
+              font-size: 1rem;
+              font-weight: 500;
+          }
+      }
+
+      .new{
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 1rem;
+      }
+
+      .panel {
+          margin-bottom: 1rem;  // Apply margin-bottom here
+          .summary{
+              font-weight: bold;
+          }
+        }
+        
+    
+
+      .activity {
+          margin-top: 1rem;
+
+          .noActivityMessage {
+              font-size: 16px;
+              /* Adjust the font size */
+              color: #c43b3b;
+              /* A neutral gray color for the message text */
+              text-align: center;
+              /* Center the text */
+              padding: 20px;
+              /* Add some padding around the message */
+              background-color: #f9f9f9;
+              /* A light background color for emphasis */
+              border: 1px solid #ddd;
+              /* A subtle border to distinguish the message area */
+              border-radius: 8px;
+              /* Rounded corners for a softer look */
+              margin-top: 20px;
+              /* Space above the message */
+          }
+
+          :global(.p-accordion-tab) {
+              box-shadow: none;
+              margin-bottom: 1rem;
+
+              // :global(.p-accordion-header) {
+              //     width: max-content;
+              //     margin-top: 20px;
+
+              //     &:hover,
+              //     &:focus,
+              //     &:focus-visible {
+              //         a {
+              //             box-shadow: none !important;
+              //             background: #fff !important;
+              //         }
+              //     }
+
+              //     a {
+              //         position: relative;
+              //         padding: 0 20px 0 0 !important;
+              //         width: max-content;
+              //         border: 0;
+              //         background: #fff;
+
+              //         &:hover,
+              //         &:focus,
+              //         &:focus-visible {
+              //             box-shadow: none !important;
+              //             background: #fff !important;
+              //         }
+
+              //         svg {
+              //             position: absolute;
+              //             right: -10px;
+              //         }
+              //     }
+              // }
+
+              :global(.p-accordion-header) {
+                  &:gloabl(.p-accordion-header-link) {
+                      border: var(--border);
+                      border-bottom: 0;
+                  }
+              }
+
+              :global(.p-accordion-content) {
+                  padding-top: 1.7rem;
+                  border: var(--border);
+                  border-top: 0;
+              }
+          }
+
+          :global(.p-timeline-event-opposite) {
+              display: none;
+          }
+
+          :global(.p-timeline-event-content) {
+              background: rgba(243, 243, 243, 1);
+              padding: 10px;
+              margin-left: 10px;
+              border-radius: 8px;
+              margin-bottom: 20px;
+              margin-top: -10px;
+          }
+
+          :global(.p-timeline-event-marker) {
+              background: rgba(243, 243, 243, 1);
+              border: 2px solid rgba(100, 100, 100, 1);
+          }
+      }
+
+      .profile {
+          margin-bottom: 1rem;
+          border-radius: 12px;
+          border: var(--border);
+
+          .card {
+              .body {
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+
+                  .name_box {
+                      width: 60px;
+                      height: 60px;
+                      display: grid;
+                      color: #fff;
+                      place-items: center;
+                      border-radius: 50px;
+                      background: #dc9d3e;
+                      font-size: 1.2rem;
+                      font-weight: 500;
+                  }
+
+                  .name {
+                      color: var(--text-color-2);
+                      font-size: 20px;
+                      font-weight: 500;
+                  }
+
+                  .title {
+                      color: #bbb;
+                      font-size: 1rem;
+                      font-weight: 500;
+                  }
+
+                  button {
+                      width: 100%;
+                  }
+
+                  .last_activity {
+                      gap: 10px;
+                      display: flex;
+                      align-items: center;
+                      font-size: 0.9rem;
+                      font-weight: 700;
+                      margin-bottom: 10px;
+                      color: var(--text-color-1);
+
+                      span {
+                          display: inline-block;
+                          height: 5px;
+                          width: 5px;
+                          border-radius: 50%;
+                          background: #00d03a;
+                      }
+                  }
+              }
+          }
+
+          .profile_tabs {
+              ul {
+                  background: transparent;
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+
+                  :global(.tabview-nav-link) {
+                      border-color: var(--color-2) !important;
+                  }
+
+                  a {
+                      font-size: 1rem;
+                      font-weight: 500;
+                      color: var(--text-color-2) !important;
+
+                      &:focus {
+                          box-shadow: none !important;
+                      }
+                  }
+              }
+
+              .tabs_body {
+                  font-weight: 500;
+                  font-size: 0.9rem;
+                  padding: 0 1rem 1rem 1rem;
+                  color: var(--text-color-1);
+
+                  label {
+                      display: block;
+                      color: #9f9f9f;
+                      font-size: 14px;
+                      font-weight: 500;
+                      margin: 10px 0;
+                  }
+              }
+          }
+      }
+  }
+}
+
+
+.noTaskMessage {
+  font-size: 16px;
+  /* Adjust the font size */
+  color: #c43b3b;
+  /* A neutral gray color for the message text */
+  text-align: center;
+  /* Center the text */
+  padding: 20px;
+  /* Add some padding around the message */
+  background-color: #f9f9f9;
+  /* A light background color for emphasis */
+  border: 1px solid #ddd;
+  /* A subtle border to distinguish the message area */
+  border-radius: 8px;
+  /* Rounded corners for a softer look */
+  margin-top: 20px;
+  /* Space above the message */
+}
+
+// In Cards
+
+.card {
+  gap: 10px;
+  display: grid;
+  padding: 1rem;
+  padding-bottom: 0;
+  place-items: center;
+  position: relative;
+  background: #ffffff;
+  border: var(--border);
+  border-radius: 12px;
+}
+
+// Add n Edit workflow
+
+
+.card {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.dragging {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+// .cardContent {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 15px;
+// }
+
+.fixedCard {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.deleteButton {
+  margin-top: 10px;
+}
+
+.addButton {
+  margin-top: 20px;
+}
+
+
+.dialog_buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;  /* Add gap between buttons */
+  margin-top: 1rem;
+}
+
+// components/Workflow/screenselect, jobs/application/[view], jobs/recruiter-form
+
+.slider {
+  bottom: 5px;
+  :global(.rc-slider-rail) {
+      background-color: #dadada;
+      height: 7px;
+  }
+  :global(.rc-slider-track) {
+      background-color: #dadada;
+  }
+  :global(.rc-slider-mark-text) {
+      margin-top: 6px;
+  }
+  :global(.rc-slider-dot) {
+      width: 2px;
+      height: 15px;
+      bottom: -7px;
+      border-radius: 0;
+      border-color: #cbcbcb;
+  }
+  :global(.rc-slider-handle) {
+      width: 29px;
+      height: 29px;
+      margin-top: -12px;
+      background-color: #e56846;
+      border: solid 0px #96dbfa;
+      border-radius: 50%;
+      opacity: 1;
+  }
+}
+
+// MailAccordin, 
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,88 @@
+.fileUploadContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  
+    .filePreview {
+      margin-bottom: 10px;
+      img {
+        border-radius: 50%;
+      }
+      .imageContainer {
+        position: relative;
+        display: inline-block;
+  
+        img {
+          display: block;
+        }
+  
+        .removeButton {
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          cursor: pointer;
+          z-index: 10;
+          height: auto;
+          width: auto;
+          font-size: 0.15rem;
+          padding: 0.75rem 0.75rem;
+
+          .pi {  // Adjust the icon size to be smaller
+            font-size: 0.25rem;  // Smaller icon size
+          }
+  
+          &:hover {
+            transform: scale(1.1);  // Slightly enlarge the icon on hover
+          }
+        }
+        .p-button {
+          width: 24px;   // Adjust width for smaller size
+          height: 24px;  // Adjust height for smaller size
+          padding: 0;    // Remove extra padding
+        }
+
+        
+        .pi {  // Adjust the icon size to be smaller
+          font-size: 0.25rem;  // Smaller icon size
+        }
+        
+      }
+    }
+  
+    .fileInput {
+      position: relative;
+      width: 100%;
+      text-align: center;
+  
+      // .input {
+      //   display: none;
+      // }
+  
+      .dashedBox {
+        border: 2px dashed #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        transition: border-color 0.3s ease;
+        &:hover {
+          border-color: #000;
+        }
+      }
+    }
+  
+    .actions {
+      margin-top: 10px;
+      .removeBtn {
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+  }
+  

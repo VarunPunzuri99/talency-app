@@ -1,0 +1,17 @@
+// internals/contacts, recruitment-team, vendor-team, contacts/add and sales/accounts, contacts, tasks, clients/add
+
+.form {
+  label {
+      display: block;
+      margin-bottom: var(--gap);
+  }
+
+  .buttons {
+      display: flex;
+      gap: 10px;
+
+      .discard {
+          background-color: #C90000;
+      }
+  }
+}

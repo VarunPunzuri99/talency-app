@@ -1,0 +1,60 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    // border: blue dotted;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    overflow-y: none;
+
+    .buttons{
+        display: flex;
+        gap:1rem;
+        margin-top: 1rem;
+    }
+
+}
+
+// .checkBox{
+//     display: flex;
+//     justify-content: flex-end;
+//     gap:1px;
+//     cursor: pointer;
+// }
+
+.checkBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    
+    .checkboxLabel {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        font-size: 1rem;
+        color: var(--text-color);
+        user-select: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color:rgb(230, 141, 117);
+        }
+    }
+
+    .checkboxInput {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .checkbox-icon {
+        color: var(--primary-color);
+        transition: transform 0.3s;
+    }
+}

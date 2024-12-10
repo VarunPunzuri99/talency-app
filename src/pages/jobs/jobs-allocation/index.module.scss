@@ -1,0 +1,170 @@
+.teamButton {
+    padding: 8px 8px 14px 8px;
+    // border: none;
+    background-color: white;
+    color: rgb(75, 85, 99);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 400;
+    // transition: border 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for border and shadow */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow by default */
+    border: 1px solid rgb(229, 231, 235);
+  }
+  
+  // .active {
+  //   border-left: 3px solid rgb(6, 182, 212); /* Same color as hover */
+  //   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Keep darker shadow */
+  // }
+  .placeholderText {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .teamContainer {
+    margin-bottom: 1.5rem;
+  
+  }
+  
+  
+  .treeCursor .p-treenode-content {
+    cursor: pointer;
+  }
+  .vendorsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+  
+  .vendorAccordionContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .vendorCard {
+    padding: 1.25rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #f8fafc;
+    }
+    
+    .vendorName {
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: #1e293b;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+    
+    .vendorDetails {
+      font-size: 0.875rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+  }
+  
+  // Drag and drop styles
+  .draggable {
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 8px;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+    
+    &.dragOver::after {
+      background-color: rgba(3, 105, 161, 0.08);
+      border: 2px dashed #0369a1;
+    }
+  }
+  // Freelancer styles
+  .freelancerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 200px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .noMembers {
+    color: #64748b;
+    font-size: 14px;
+    padding: 12px;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+
+  @keyframes borderMove {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 300% 0%;
+    }
+  }
+  
+  .leadContainer {
+    position: relative;
+    
+    &.dragOver {
+      background-color: rgba(3, 105, 161, 0.08);
+      background-image: linear-gradient(
+        90deg,
+        #0369a1 50%,
+        transparent 50%
+      );
+      background-size: 30px 2px;
+      background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+      background-position: 
+        0 0,
+        0 100%,
+        0 0,
+        100% 0;
+      animation: borderMove 20s linear infinite;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(5, 102, 142, 0.5);
+    }
+  }
+  
+  .memberContainer {
+    position: relative;
+    
+    &.memberDragOver {
+      background-color: rgba(2, 100, 103, 0.08);
+      background-image: linear-gradient(
+        90deg,
+        #036324 50%,
+        transparent 50%
+      );
+      background-size: 30px 2px;
+      background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+      background-position: 
+        0 0,
+        0 100%,
+        0 0,
+        100% 0;
+      animation: borderMove 20s linear infinite;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(5, 102, 142, 0.5);
+    }
+  }
+  
+  
